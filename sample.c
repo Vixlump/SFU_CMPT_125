@@ -63,8 +63,19 @@ int get_depth (BTnode_t * root) {
 		return MAX(get_depth(root->left), get_depth(root->right))+1;
 	}
 }
-
-void traverse_tree(BTnode_t* root, int * collect_sum) {
+bool is_descendant (BTnode_t * u, BTnode_t * v) {//check if u is a descendant of v
+	if(u==v) {
+		//something needs to go here I am not sure what though yet
+	}
+	BTnode_t * p = u;
+	while (p!=NULL) {
+		if (p==v) return true;
+		p = p->parent;
+		
+	}
+	return false;
+}
+void traverse_tree(BTnode_t* root, int * collect_sum) {//current used in the form of collecting a sum, also using pre order travers
 	if (root==NULL) {
 		return;
 	}
