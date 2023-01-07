@@ -1,4 +1,4 @@
-//Name: Cohen ter Heide ID:301549869 Email:cjt15@sfu.ca
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
